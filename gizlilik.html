@@ -34,9 +34,12 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 <body>
 <main>
 <h1>Hafifle Gizlilik Politikası</h1>
-<p class="meta">Son güncelleme: 26 Kasım 2026 · Uygulama: Hafifle (iOS ve Android)</p>
+<p class="meta">Son güncelleme: 27 Kasım 2026 · Uygulama: Hafifle (iOS ve Android)</p>
 
-<p class="lead">Kısaca: Hafifle'de hesap açılmaz. Kilon, yediklerin, su, ilaç ve spor kayıtların yalnızca kendi telefonunda saklanır. Yalnızca kalori hesaplaması için gönderdiğin fotoğraf veya yazı, analiz için sunucumuza iletilir ve saklanmaz.</p>
+<p class="lead">Kısaca: Hafifle'de hesap açılmaz. Kilon, yediklerin, su, ilaç ve spor kayıtların yalnızca kendi telefonunda saklanır. Yapay zekâ analizi için fotoğraf veya yazı göndermek isteğe bağlıdır: ancak uygulamada <b>açık rıza</b> verirsen, yurt dışındaki yapay zekâ hizmetlerine (Google Gemini, yedek olarak Anthropic) aktarılır ve saklanmaz.</p>
+
+<h2>Veri sorumlusu</h2>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında veri sorumlusu <b>NuunMedya</b>'dır (iletişim: nuunmedya@gmail.com). Hafifle ve aynı geliştiricinin diğer uygulamaları ortak bir sunucu altyapısı (Supabase) kullanır; veri sorumlusu her durumda NuunMedya'dır.</p>
 
 <h2>Hangi veri nerede duruyor</h2>
 <table class="stack">
@@ -44,22 +47,43 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 <tbody>
 <tr><td>Boy, kilo, yaş, cinsiyet, hedefler, alerjiler</td><td>Yalnızca telefonunda</td><td>Kalori hedefini ve menünü hesaplamak</td></tr>
 <tr><td>Öğün, su, ilaç, oruç, spor ve adım kayıtları</td><td>Yalnızca telefonunda</td><td>Günlük takibini göstermek</td></tr>
-<tr><td>Kalori için çektiğin fotoğraf veya yazdığın metin</td><td>Analiz için sunucumuza gider, saklanmaz</td><td>Yemeği tanıyıp kalorisini hesaplamak</td></tr>
-<tr><td>Yemekhane listesi (fotoğraf/PDF/metin)</td><td>Analiz için sunucumuza gider, saklanmaz</td><td>Listeyi günlere ayırmak</td></tr>
-<tr><td>Rastgele cihaz kimliği, platform, uygulama sürümü</td><td>Sunucumuzda</td><td>Günlük kullanım sınırı, hata takibi, kullanıcı sayısı</td></tr>
+<tr><td>Kalori için çektiğin fotoğraf veya yazdığın metin</td><td>Açık rızanla: sunucumuz üzerinden Google Gemini / Anthropic'e gider, saklanmaz</td><td>Yemeği tanıyıp kalorisini hesaplamak</td></tr>
+<tr><td>Yapay zekâ menüsü için cinsiyet, yaş, kalori ve protein hedefi, beslenme tarzı, alerjiler</td><td>Açık rızanla: sunucumuz üzerinden Google Gemini / Anthropic'e gider, saklanmaz</td><td>7 günlük menü hazırlamak</td></tr>
+<tr><td>Yemekhane listesi (fotoğraf/PDF/metin)</td><td>Açık rızanla: sunucumuz üzerinden Google Gemini / Anthropic'e gider, saklanmaz</td><td>Listeyi günlere ayırmak</td></tr>
+<tr><td>Rastgele cihaz kimliği, platform, uygulama sürümü, adın (girdiysen), yapay zekâ kullanım sayısı ve kayıtları</td><td>Sunucumuzda</td><td>Günlük kullanım sınırı, hata takibi, kullanıcı sayısı</td></tr>
 <tr><td>Bildirim anahtarı (izin verirsen)</td><td>Sunucumuzda</td><td>Duyuru bildirimi göndermek</td></tr>
-<tr><td>Reklam kimliği (izin verirsen)</td><td>Google AdMob</td><td>Reklam göstermek</td></tr>
+<tr><td>Reklam isteği (kişiselleştirilmemiş)</td><td>Google AdMob</td><td>Reklam göstermek; sağlık verilerin reklam için kullanılmaz</td></tr>
 </tbody>
 </table>
 
 <h2>Hesap ve kişisel bilgiler</h2>
 <p>Hafifle'de üyelik, e-posta veya telefon numarası istenmez. Girdiğin isim yalnızca uygulamada sana hitap etmek için telefonunda tutulur; sunucuya cihaz kaydıyla birlikte yalnızca adın gönderilebilir, soyadın veya iletişim bilgin istenmez.</p>
 
-<h2>Fotoğraf ve yapay zekâ analizi</h2>
-<p>Fotoğrafla kalori hesaplarken önce telefondaki kendi tanıma motorumuz denenir; bu durumda fotoğraf telefondan çıkmaz. Gerektiğinde fotoğraf veya metin, şifreli bağlantıyla Supabase üzerindeki sunucumuza, oradan da analiz için Google Gemini yapay zekâ hizmetine iletilir. Fotoğrafı ve metni kendi sunucumuzda saklamayız. Google'ın bu verileri işlemesi Google'ın kendi koşullarına tabidir.</p>
+<h2>Sağlık verisi, yapay zekâ ve açık rıza</h2>
+<p>Kilo, öğün, beslenme ve ilaç bilgileri KVKK'ya göre <b>özel nitelikli kişisel veri</b> (sağlık verisi) sayılır. Uygulama ilk açılışta "Verilerin ve yapay zekâ" ekranında iki ayrı onay ister: (1) sağlık verilerinin işlenmesine açık rıza, (2) fotoğraf ve öğün bilgisinin yurt dışındaki yapay zekâ hizmetlerine aktarılmasına açık rıza. İkisini de vermezsen <b>hiçbir veri yapay zekâya gönderilmez</b>; fotoğraf analizi ve yapay zekâ menüsü kapalı kalır, su, ilaç, spor ve elle öğün takibi çalışmaya devam eder.</p>
+<p>Fotoğrafla kalori hesaplarken telefondaki kendi tanıma motorumuz da kullanılır; bu durumda fotoğraf telefondan çıkmaz. Onay verdiysen fotoğraf veya metin, şifreli bağlantıyla Supabase üzerindeki sunucumuza, oradan analiz için Google Gemini'ye, Gemini yanıt vermezse yedek olarak Anthropic'e (Claude) iletilir. Fotoğrafı ve metni kendi sunucumuzda saklamayız.</p>
+
+<h2>Verini işleyenler ve yurt dışına aktarım</h2>
+<table class="stack">
+<thead><tr><th>Hizmet</th><th>Ne için</th><th>Konum</th></tr></thead>
+<tbody>
+<tr><td>Supabase</td><td>Sunucu fonksiyonu, cihaz kaydı, kullanım sınırı</td><td>Yurt dışı</td></tr>
+<tr><td>Google Gemini (Google LLC)</td><td>Fotoğraf/metin analizi, menü, yemekhane listesi</td><td>Yurt dışı</td></tr>
+<tr><td>Anthropic (Claude)</td><td>Gemini yanıt vermezse yedek analiz</td><td>Yurt dışı</td></tr>
+<tr><td>Google AdMob</td><td>Kişiselleştirilmemiş banner reklam</td><td>Yurt dışı</td></tr>
+</tbody>
+</table>
+<p>Yapay zekâ hizmetlerine yurt dışı aktarımın dayanağı KVKK m. 9 kapsamında verdiğin <b>açık rızadır</b>. Bu hizmetlerin veriyi işlemesi ayrıca kendi koşullarına tabidir.</p>
+
+<h2>Saklama süreleri</h2>
+<ul>
+<li><b>Fotoğraf ve metin:</b> saklanmaz; analiz biter bitmez silinir.</li>
+<li><b>Telefonundaki kayıtlar:</b> sen silene ya da uygulamayı kaldırana kadar.</li>
+<li><b>Sunucudaki cihaz kaydı, kullanım kayıtları ve günlük sayaçlar:</b> Profil → Gizlilik ve veriler → "Tüm verilerimi sil" ile sildiğin ya da bize yazdığın ana kadar.</li>
+</ul>
 
 <h2>Reklamlar</h2>
-<p>Uygulama ücretsizdir ve bazı ekranlarda Google AdMob banner reklamı gösterilir. Türkiye ve Avrupa'daki kullanıcılara reklamdan önce Google'ın izin ekranı gösterilir; kişiselleştirilmiş reklamı reddedebilirsin. Kararını Profil → "Reklam gizlilik ayarları"ndan istediğin zaman değiştirebilirsin. iOS'ta izleme izni ayrıca sorulur ve vermesen de uygulama tamamen çalışır.</p>
+<p>Uygulama ücretsizdir ve bazı ekranlarda Google AdMob banner reklamı gösterilir. Reklamlar <b>kişiselleştirilmemiştir</b>: sağlık verilerin ve uygulamadaki kayıtların reklam hedeflemesi için kullanılmaz. Türkiye ve Avrupa'daki kullanıcılara reklamdan önce Google'ın izin ekranı gösterilir. Kararını Profil → "Reklam gizlilik ayarları"ndan istediğin zaman değiştirebilirsin. iOS'ta izleme izni ayrıca sorulur ve vermesen de uygulama tamamen çalışır.</p>
 
 <h2>İzinler</h2>
 <ul>
@@ -71,8 +95,8 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 <h2>Sağlık uyarısı</h2>
 <p>Hafifle bir tıbbi cihaz değildir. Kalori ve besin değerleri tahminidir; ilaç hatırlatmaları yalnızca hatırlatma amaçlıdır. Sağlık durumunla ilgili kararlar için doktoruna danış.</p>
 
-<h2>Verilerini silme</h2>
-<p>Telefonundaki tüm verileri Profil → "Tüm verileri sil" ile ya da uygulamayı kaldırarak silebilirsin. Sunucudaki cihaz kaydının ve kullanım kayıtlarının silinmesini istersen bize yaz; 30 gün içinde sileriz.</p>
+<h2>Haklarım ve verilerini silme</h2>
+<p>KVKK m. 11 kapsamında verilerinin işlenip işlenmediğini öğrenme, düzeltme, silme ve itiraz haklarına sahipsin. Açık rızanı Profil → <b>Gizlilik ve veriler</b> → "Onaylarımı geri çek" ile istediğin zaman geri çekebilirsin; geri çektiğin andan itibaren yapay zekâya veri gönderilmez. Aynı ekrandaki "Tüm verilerimi sil" telefonundaki kayıtları ve sunucudaki cihaz kaydını, kullanım kayıtlarını birlikte siler. Diğer talepler için bize yaz; en geç 30 gün içinde yanıtlarız.</p>
 
 <h2>Çocuklar</h2>
 <p>Hafifle 13 yaşından küçükler için tasarlanmamıştır ve bu yaştaki çocuklardan bilerek veri toplamaz.</p>
@@ -84,7 +108,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 <hr>
 
 <h2>Privacy Policy (English summary)</h2>
-<p>Hafifle requires no account. Your profile, meals, water, medication, fasting and exercise logs are stored only on your device. Food photos or text you submit for calorie estimation may be sent over an encrypted connection to our server (Supabase) and to Google Gemini for analysis; we do not store them. We store a random device ID, platform, app version, optional push token and AI usage logs to operate daily limits, announcements and error tracking. Banner ads are served by Google AdMob with a consent prompt; you can change your choice in Profile → "Reklam gizlilik ayarları". Hafifle is not a medical device. To delete server-side records, email nuunmedya@gmail.com.</p>
+<p>Hafifle requires no account. Your profile, meals, water, medication, fasting and exercise logs are stored only on your device. Health-related data and food photos are sent for AI analysis only after you give explicit consent in the app; they are then sent over an encrypted connection via our server (Supabase) to Google Gemini, or Anthropic as a fallback, outside Türkiye, and are not stored. You can withdraw consent or delete your device and server records in Profile → "Gizlilik ve veriler". The data controller is NuunMedya. We store a random device ID, platform, app version, optional push token and AI usage logs to operate daily limits, announcements and error tracking. Banner ads are non-personalized, served by Google AdMob with a consent prompt; health data is never used for advertising; you can change your choice in Profile → "Reklam gizlilik ayarları". Hafifle is not a medical device. To delete server-side records, email nuunmedya@gmail.com.</p>
 </main>
 </body>
 </html>
