@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hafifle Gizlilik Politikası</title>
+<style>
+/* VOICE: resmi ama sade bir belge, sakin ve güven veren
+   IDEA: iyi dizilmiş bir hukuk notu
+   PICTURE: başta hangi verinin nerede durduğunu gösteren tablo
+   COLOUR and TYPE: beyaz zemin, Hafifle turkuazı tek vurgu; Nunito
+   LAYOUT: tek sütun, başlıklar noktayı söyler */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;900&display=swap');
+:root{color-scheme:light dark;--bg:light-dark(#fff,#0f1c24);--ink:light-dark(#16263A,#e6eef2);--sub:light-dark(#4b5d6e,#a9bac6);--acc:light-dark(#1F8A9E,#5cc3d4);--line:light-dark(#dde6ec,#24343f);--soft:light-dark(#E3F2F5,#14303a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:600 16px/1.6 Nunito,system-ui,sans-serif;overflow-x:clip}
+main{max-width:760px;margin:0 auto;padding:clamp(28px,5vw,64px) max(5vw,16px) 64px}
+h1{font-weight:900;font-size:clamp(32px,6vw,44px);line-height:1.08;margin:0 0 6px;text-wrap:balance}
+.meta{color:var(--sub);font-size:14px;margin:0 0 28px}
+h2{font-weight:900;font-size:21px;line-height:1.2;margin:36px 0 8px;color:var(--acc)}
+p,li{font-size:16.5px}
+ul{padding-left:20px}
+.lead{background:var(--soft);border-radius:16px;padding:18px 20px;margin:0 0 8px}
+table{width:100%;border-collapse:collapse;margin:12px 0 4px;font-size:15px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:900;font-size:14px;color:var(--sub)}
+a{color:var(--acc)}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+@media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--sub)}.stack td:empty{display:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<main>
+<h1>Hafifle Gizlilik Politikası</h1>
+<p class="meta">Son güncelleme: 26 Kasım 2026 · Uygulama: Hafifle (iOS ve Android)</p>
+
+<p class="lead">Kısaca: Hafifle'de hesap açılmaz. Kilon, yediklerin, su, ilaç ve spor kayıtların yalnızca kendi telefonunda saklanır. Yalnızca kalori hesaplaması için gönderdiğin fotoğraf veya yazı, analiz için sunucumuza iletilir ve saklanmaz.</p>
+
+<h2>Hangi veri nerede duruyor</h2>
+<table class="stack">
+<thead><tr><th>Veri</th><th>Nerede</th><th>Neden</th></tr></thead>
+<tbody>
+<tr><td>Boy, kilo, yaş, cinsiyet, hedefler, alerjiler</td><td>Yalnızca telefonunda</td><td>Kalori hedefini ve menünü hesaplamak</td></tr>
+<tr><td>Öğün, su, ilaç, oruç, spor ve adım kayıtları</td><td>Yalnızca telefonunda</td><td>Günlük takibini göstermek</td></tr>
+<tr><td>Kalori için çektiğin fotoğraf veya yazdığın metin</td><td>Analiz için sunucumuza gider, saklanmaz</td><td>Yemeği tanıyıp kalorisini hesaplamak</td></tr>
+<tr><td>Yemekhane listesi (fotoğraf/PDF/metin)</td><td>Analiz için sunucumuza gider, saklanmaz</td><td>Listeyi günlere ayırmak</td></tr>
+<tr><td>Rastgele cihaz kimliği, platform, uygulama sürümü</td><td>Sunucumuzda</td><td>Günlük kullanım sınırı, hata takibi, kullanıcı sayısı</td></tr>
+<tr><td>Bildirim anahtarı (izin verirsen)</td><td>Sunucumuzda</td><td>Duyuru bildirimi göndermek</td></tr>
+<tr><td>Reklam kimliği (izin verirsen)</td><td>Google AdMob</td><td>Reklam göstermek</td></tr>
+</tbody>
+</table>
+
+<h2>Hesap ve kişisel bilgiler</h2>
+<p>Hafifle'de üyelik, e-posta veya telefon numarası istenmez. Girdiğin isim yalnızca uygulamada sana hitap etmek için telefonunda tutulur; sunucuya cihaz kaydıyla birlikte yalnızca adın gönderilebilir, soyadın veya iletişim bilgin istenmez.</p>
+
+<h2>Fotoğraf ve yapay zekâ analizi</h2>
+<p>Fotoğrafla kalori hesaplarken önce telefondaki kendi tanıma motorumuz denenir; bu durumda fotoğraf telefondan çıkmaz. Gerektiğinde fotoğraf veya metin, şifreli bağlantıyla Supabase üzerindeki sunucumuza, oradan da analiz için Google Gemini yapay zekâ hizmetine iletilir. Fotoğrafı ve metni kendi sunucumuzda saklamayız. Google'ın bu verileri işlemesi Google'ın kendi koşullarına tabidir.</p>
+
+<h2>Reklamlar</h2>
+<p>Uygulama ücretsizdir ve bazı ekranlarda Google AdMob banner reklamı gösterilir. Türkiye ve Avrupa'daki kullanıcılara reklamdan önce Google'ın izin ekranı gösterilir; kişiselleştirilmiş reklamı reddedebilirsin. Kararını Profil → "Reklam gizlilik ayarları"ndan istediğin zaman değiştirebilirsin. iOS'ta izleme izni ayrıca sorulur ve vermesen de uygulama tamamen çalışır.</p>
+
+<h2>İzinler</h2>
+<ul>
+<li><b>Kamera ve galeri:</b> yalnızca yemek veya yemekhane listesi fotoğrafı için.</li>
+<li><b>Bildirimler:</b> su, ilaç, oruç hatırlatmaları ve duyurular için.</li>
+<li><b>Hareket/adım (Android):</b> adım sayısını göstermek için; veriler telefonda kalır.</li>
+</ul>
+
+<h2>Sağlık uyarısı</h2>
+<p>Hafifle bir tıbbi cihaz değildir. Kalori ve besin değerleri tahminidir; ilaç hatırlatmaları yalnızca hatırlatma amaçlıdır. Sağlık durumunla ilgili kararlar için doktoruna danış.</p>
+
+<h2>Verilerini silme</h2>
+<p>Telefonundaki tüm verileri Profil → "Tüm verileri sil" ile ya da uygulamayı kaldırarak silebilirsin. Sunucudaki cihaz kaydının ve kullanım kayıtlarının silinmesini istersen bize yaz; 30 gün içinde sileriz.</p>
+
+<h2>Çocuklar</h2>
+<p>Hafifle 13 yaşından küçükler için tasarlanmamıştır ve bu yaştaki çocuklardan bilerek veri toplamaz.</p>
+
+<h2>Değişiklikler ve iletişim</h2>
+<p>Bu politika değişirse bu sayfadaki tarih güncellenir. Soruların ve silme talepleri için: <b>nuunmedya@gmail.com</b></p>
+<p>Geliştirici: NuunMedya</p>
+
+<hr>
+
+<h2>Privacy Policy (English summary)</h2>
+<p>Hafifle requires no account. Your profile, meals, water, medication, fasting and exercise logs are stored only on your device. Food photos or text you submit for calorie estimation may be sent over an encrypted connection to our server (Supabase) and to Google Gemini for analysis; we do not store them. We store a random device ID, platform, app version, optional push token and AI usage logs to operate daily limits, announcements and error tracking. Banner ads are served by Google AdMob with a consent prompt; you can change your choice in Profile → "Reklam gizlilik ayarları". Hafifle is not a medical device. To delete server-side records, email nuunmedya@gmail.com.</p>
+</main>
+</body>
+</html>
